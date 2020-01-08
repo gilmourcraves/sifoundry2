@@ -28,7 +28,7 @@
 <body <?php body_class(); ?>>
 
 <div class="gc-wrapper">
-    <div class="container-page container-section-nav">
+    <div class="container-page container-section-nav container-section-nav-fixed">
         <div class="container">
 
             <header>
@@ -44,12 +44,9 @@
                                 <span class="icon-bar bottom-bar"></span>
                             </button>
                             <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                                <?php get_header_image(); ?>
-                                <?php if(get_header_image() != ''): ?>
-                                    <img src="<?php header_image(); ?>" class="img-responsive logo" alt="<?php  bloginfo('name'); ?>" />
-                                <?php else: ?>
-                                    <h1><?php  bloginfo('name'); ?></h1>
-                                <?php endif; ?>
+
+                              <img src="/wp-content/themes/gc-responsive/images/logo-sifoundry.svg" class="img-responsive logo" alt="<?php  bloginfo('name'); ?>" />
+
                             </a>
                         </div>
 

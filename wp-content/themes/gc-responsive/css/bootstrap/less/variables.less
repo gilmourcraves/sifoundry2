@@ -1,3 +1,40 @@
+
+/*--------------------------------------------------------*\
+    Fonts
+\*--------------------------------------------------------*/
+
+@font-face {
+  font-family: HelveticaNeueLight;
+  src: url(/wp-content/themes/gc-responsive/fonts/HelveticaNeue-Light.otf) format('opentype'),
+  url(/wp-content/themes/gc-responsive/fonts/HelveticaNeueLight.ttf) format('truetype')
+}
+
+@font-face {
+  font-family: HelveticaNeueMedium;
+  src: url(/wp-content/themes/gc-responsive/fonts/HelveticaNeue-MediumCond.otf) format('opentype')
+}
+
+@font-face {
+  font-family: HelveticaNeueBold;
+  src: url(/wp-content/themes/gc-responsive/fonts/HelveticaNeueBold.ttf) format('truetype')
+}
+
+@font-face {
+  font-family: HelveticaNeueBoldCondensed;
+  src: url(/wp-content/themes/gc-responsive/fonts/HelveticaNeueCondensedBold.ttf) format('truetype')
+}
+
+
+@header-height: 95px;
+
+//WordPress admin bar
+@wp-admin-bar-height: 32px;
+@wp-admin-bar-height-mobile: 46px; //max-with: 782px;
+
+@logged-in-height: 127px;
+
+
+
 //
 // Variables
 // --------------------------------------------------
@@ -17,13 +54,28 @@
 @gray-lightest:          #f7f7f7; // #eee
 
 
-@brand-primary:         #58b4e5;
+@brand-primary:         #44aac3;
 @brand-secondary:       #7a868c;
 @brand-tertiary:        #fc0;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
+
+/*--------------------------------------------------------*\
+    Colors
+\*--------------------------------------------------------*/
+
+
+@blue: #44aac3;
+@dark-blue: #243440;
+@black: #000;
+
+// grays
+@gray-darkest: #222222;
+@gray-dark: #707070;
+@gray-light: #edf1f4;   //rgba(0, 0, 0, 0.16);
+@gray-lightest: #f6f9fc;
 
 // custom
 @gray-line:              #ddd;
@@ -37,7 +89,7 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            #0A162D;;
+@text-color:            #41525D;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -57,16 +109,18 @@
 @color-gray-dark:       #979797;
 @color-gray-light:      #ececec;
 
-@color-nav-background:  @color-gray-light;
+@color-nav-background:  #fff;
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-//'AvenirNextLTW01-Regular', sans-serif;
-@font-family-sans-serif: 'Lato', sans-serif;
-@font-family-sans-serif-bold: 'Lato', sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif: HelveticaNeueLight, Arial, sans-serif;
+@font-family-sans-serif-medium: HelveticaNeueMedium, Arial, sans-serif;
+@font-family-sans-serif-bold: HelveticaNeueBold, Arial, sans-serif;
+@font-family-sans-serif-bold-condensed: HelveticaNeueBoldCondensed, Arial, sans-serif;
+@font-family-serif: Georgia, serif;
+
 
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
