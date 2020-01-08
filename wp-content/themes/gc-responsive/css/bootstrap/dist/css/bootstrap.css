@@ -8977,11 +8977,14 @@ body {
   margin: 0;
   width: 100%;
 }
+.container-gc {
+  padding: 80px 15px;
+}
 .container-section-nav {
   width: 100%;
   background: #fff;
   height: 80px;
-  padding: 10px 0;
+  padding: 10px 0 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -8989,6 +8992,10 @@ body {
   transition: none;
   z-index: 99 !important;
   border-bottom: 1px solid #ccc;
+}
+.container-section-nav .container {
+  width: 100%;
+  padding: 0 20px;
 }
 .section-basic {
   padding: 60px 0;

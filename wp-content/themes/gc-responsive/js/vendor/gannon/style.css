@@ -1,0 +1,86 @@
+
+svg {
+ width: 100%;
+ height: 100%;
+ visibility: hidden; 
+}
+
+line {
+	stroke-width: 0.5px;
+}
+#boxes rect {
+	fill: #243440;
+	
+}
+/* #boxes .box:nth-child(4) {
+	fill: red;
+	cursor: pointer;
+}
+#boxes .box:nth-child(7) {
+	fill: red;
+	cursor: pointer;
+}
+#boxes .box:nth-child(11) {
+	fill: red;
+	cursor: pointer;
+} */
+.boxLabel {
+	fill:#243440;
+	font-family: sans-serif;
+	text-anchor: start;
+	font-size: 0.8rem;
+}
+
+#boxLabel0, #boxLabel1, #boxLabel2 {
+	cursor: pointer;
+}
+.boxLabel * {
+	
+	user-select: none;
+}
+.boxLabel rect {
+	fill: transparent;
+}
+.boxLabel text {
+	pointer-events: none;
+
+}
+.panel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+	position: absolute;
+	width: 10vw;
+	height: 10vh;
+	min-width: 240px;
+	max-height: 100vh;
+}
+.info-panel {
+	background: #243440;
+	height: auto;
+
+}
+.panel-text {
+	padding-top: 0.81rem;
+	padding-left: 0.91rem;
+	padding-right: 0.91rem;
+	padding-bottom: 0.91rem;
+	font-family: sans-serif;
+	color: #FFF;
+	font-weight: 500;
+	text-align: left;
+}
+.panel-text h1 {
+	font-size: 1.2rem;
+}
+.panel-text p {
+	
+	padding-top: 0.9rem;
+	font-size: 0.8rem;
+	letter-spacing: 0.26px;
+	line-height: 1rem;
+}
+
+.panel-container {
+	opacity: 0;
+}

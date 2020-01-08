@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <?php include 'includes/icons.php'; ?>
+    <?php //include 'includes/icons.php'; ?>
 
 	<title><?php wp_title(); ?></title>
 
@@ -21,7 +21,6 @@
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 </head>
 
