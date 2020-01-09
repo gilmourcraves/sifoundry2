@@ -42,17 +42,18 @@ html, body {
 
 .container-section-nav {
   width: 100%;
-  background: @color-nav-background;
+/*  background: @color-nav-background;*/
   height: 80px;
   padding: 10px 0 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   transition: none;
   z-index: 99 !important;
-  border-bottom: 1px solid #ccc;
+/*  border-bottom: 1px solid #ccc;*/
   .container {
+    max-width: 100%;
     width: 100%;
     padding: 0 20px;
   }
@@ -96,8 +97,13 @@ html, body {
   margin: 0;
   padding: 0;
   .logo {
+
     width: 125px;
     height: 50px;
+  }
+  .logo.logo-white {
+    filter: brightness(0) invert(1) !important;
+    transition: all ease 300ms;
   }
 }
 
@@ -486,7 +492,6 @@ and (min-width : @grid-float-breakpoint) {
       display: block;
       text-transform: none;
     }
-
   }
 
   .caret {
@@ -547,12 +552,9 @@ and (min-width : @grid-float-breakpoint) {
     padding: 0 14px;
   }
 
-  #main-nav ul li:last-child:after {
-    content:  ' ';
-  }
 
   #main-nav ul li > a {
-    color: #000;
+    color: @text-color;
     display: inline-block;
     font-size: 16px;
     line-height: 16px;
@@ -567,7 +569,7 @@ and (min-width : @grid-float-breakpoint) {
   #main-nav ul li.current-menu-item a,
   #main_nav ul li.current_page_item a,
   #main_nav ul li.current-page-ancestor a {
-    color: #000;
+    color: @text-color;
   }
 
   #main {
@@ -592,19 +594,18 @@ and (min-width : @grid-float-breakpoint) {
         white-space: normal;
         padding: 5px;
         margin: 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         a {
           padding: 5px 0;
           white-space: normal;
           display: block;
-          color: #000;
+          color: @text-color;
           border-bottom: none;
           text-transform: none;
         }
         a:hover, a:active {
           padding: 5px 0;
           border-bottom: none;
-          color: lighten(#000, 50%);
+          color: lighten(@text-color, 50%);
         }
         a:hover:after, a:active:after {
           background: none;
@@ -621,10 +622,11 @@ and (min-width : @grid-float-breakpoint) {
       }
 
     }
-
   }
 
-
+  body.home #main-nav ul li > a {
+    color: #f4f4f4;
+  }
 
 
   .dropdown:hover .dropdown-menu {
@@ -705,26 +707,6 @@ and (max-width : @grid-float-breakpoint) {
 
   }
 
-  .container-section-nav-fixed {
-    transition: bottom .6s;
-    background: 0;
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    right: 0;
-    left: 0;
-    overflow: visible;
-  }
-
-  .container-nav-fixed {
-    position: fixed;
-    width: 100%;
-    top: 84px;
-    bottom: 0;
-    height: 100vh;
-    overflow: scroll;
-    background-color: #fff;
-  }
 
   #gc-navbar-collapse.in {
     height: 100vh;

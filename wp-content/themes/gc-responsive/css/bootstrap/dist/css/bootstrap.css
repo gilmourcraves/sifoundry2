@@ -428,7 +428,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  font-family: HelveticaNeueBold, Arial, sans-serif;
+  font-family: HelveticaNeueLight, Arial, sans-serif;
   margin-top: 25px;
   margin-bottom: 12.5px;
 }
@@ -453,7 +453,7 @@ h5,
 h6,
 .h6 {
   font-family: HelveticaNeueLight, Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 100;
   margin-top: 12.5px;
   margin-bottom: 12.5px;
 }
@@ -6331,7 +6331,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 5px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -8982,18 +8981,19 @@ body {
 }
 .container-section-nav {
   width: 100%;
-  background: #fff;
+  /*  background: @color-nav-background;*/
   height: 80px;
   padding: 10px 0 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   transition: none;
   z-index: 99 !important;
-  border-bottom: 1px solid #ccc;
+  /*  border-bottom: 1px solid #ccc;*/
 }
 .container-section-nav .container {
+  max-width: 100%;
   width: 100%;
   padding: 0 20px;
 }
@@ -9031,6 +9031,10 @@ body {
 .navbar-brand .logo {
   width: 125px;
   height: 50px;
+}
+.navbar-brand .logo.logo-white {
+  filter: brightness(0) invert(1) !important;
+  transition: all ease 300ms;
 }
 .dropdown-menu a {
   text-transform: none;
@@ -9379,11 +9383,8 @@ ul.social li.linkedin {
     white-space: nowrap;
     padding: 0 14px;
   }
-  #main-nav ul li:last-child:after {
-    content: ' ';
-  }
   #main-nav ul li > a {
-    color: #000;
+    color: #41525D;
     display: inline-block;
     font-size: 16px;
     line-height: 16px;
@@ -9397,7 +9398,7 @@ ul.social li.linkedin {
   #main-nav ul li.current-menu-item a,
   #main_nav ul li.current_page_item a,
   #main_nav ul li.current-page-ancestor a {
-    color: #000;
+    color: #41525D;
   }
   #main {
     padding: 0;
@@ -9417,13 +9418,12 @@ ul.social li.linkedin {
     white-space: normal;
     padding: 5px;
     margin: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   #main-nav ul li ul.dropdown-menu li a {
     padding: 5px 0;
     white-space: normal;
     display: block;
-    color: #000;
+    color: #41525D;
     border-bottom: none;
     text-transform: none;
   }
@@ -9431,7 +9431,7 @@ ul.social li.linkedin {
   #main-nav ul li ul.dropdown-menu li a:active {
     padding: 5px 0;
     border-bottom: none;
-    color: #808080;
+    color: #c6d0d7;
   }
   #main-nav ul li ul.dropdown-menu li a:hover:after,
   #main-nav ul li ul.dropdown-menu li a:active:after {
@@ -9443,6 +9443,9 @@ ul.social li.linkedin {
   #main-nav ul li ul.dropdown-menu li:last-child {
     border-bottom: none;
     padding-bottom: 0;
+  }
+  body.home #main-nav ul li > a {
+    color: #f4f4f4;
   }
   .dropdown:hover .dropdown-menu {
     display: block;
@@ -9502,25 +9505,6 @@ ul.social li.linkedin {
   .container-section-nav .container {
     padding: 0;
     width: 100%;
-  }
-  .container-section-nav-fixed {
-    transition: bottom 0.6s;
-    background: 0;
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    right: 0;
-    left: 0;
-    overflow: visible;
-  }
-  .container-nav-fixed {
-    position: fixed;
-    width: 100%;
-    top: 84px;
-    bottom: 0;
-    height: 100vh;
-    overflow: scroll;
-    background-color: #fff;
   }
   #gc-navbar-collapse.in {
     height: 100vh;
@@ -9820,8 +9804,72 @@ ul.social li.linkedin {
     float: left;
   }
 }
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    width: auto;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+    width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+    width: auto;
+  }
+}
+@media (min-width: 1700px) {
+  .container {
+    max-width: 1650px;
+    width: auto;
+  }
+}
 p:empty {
   display: none;
+}
+#hero-video {
+  height: 50vh;
+}
+#hero-video .container {
+  padding-top: 80px;
+}
+#hero-video .container-header {
+  height: 200px;
+  width: 364px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-top: 20px;
+}
+#hero-video .container-header h2 {
+  width: 250px;
+  color: #FFFFFF;
+  font-size: 48px !important;
+  line-height: 52px;
+  font-weight: 100 !important;
+}
+#section-2 {
+  height: 50vh;
+}
+#section-2 h2 {
+  font-family: HelveticaNeueBold, Arial, sans-serif;
+  height: 71px;
+  font-size: 78px;
+  line-height: 71px;
+  text-align: center;
+}
+#section-2 p.lead {
+  margin: 40px auto;
+  color: #41525D;
+  font-size: 20px;
+  line-height: 1.45;
+  text-align: center;
+  max-width: 630px;
 }
 /* 06 - Blog */
 body.archive h1 {

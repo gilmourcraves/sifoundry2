@@ -27,7 +27,7 @@
 <body <?php body_class(); ?>>
 
 <div class="gc-wrapper">
-    <div class="container-page container-section-nav container-section-nav-fixed">
+    <div class="container-page container-section-nav">
         <div class="container">
 
             <header>

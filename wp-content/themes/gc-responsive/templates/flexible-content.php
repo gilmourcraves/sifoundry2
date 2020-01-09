@@ -19,8 +19,6 @@
 
 			if( have_rows('sections') ):
 
-				$scroll_spy = '';
-				$first_item = true;
 
 				// loop through the rows of data
 				while ( have_rows('sections') ) : the_row();
@@ -28,14 +26,15 @@
 					/* SECTION HERO //////////////////////////*/
 					if( get_row_layout() == 'hero_video_section' ):
 
+						$title = get_sub_field('title');
 
 						?>
 
-						<section id="hero">
+						<section id="hero-video">
 							<div class="container">
 								<div class="container-gc">
 									<div class="container-header">
-										<h2 class="text-center">Cut through the noise</h2>
+										<h2><?php echo $title ?></h2>
 									</div>
 								</div>
 							</div>
@@ -43,20 +42,26 @@
 
 						<?php
 
-					/* BASIC SECTION WITH BACKGROUND //////////////////////////*/
+					/* BASIC SECTION  //////////////////////////*/
 					elseif( get_row_layout() == 'basic_section' ):
 
 						$section_id = get_sub_field('section_id');
-						$header = get_sub_field('header');
+						$title = get_sub_field('title');
 
 
 						?>
 
-						<section id="<?php echo $section_id ?>" class="<?php the_sub_field('background_class'); ?>">
+						<section id="<?php echo $section_id ?>" class="section-basic <?php the_sub_field('background_class'); ?>" style="background: <?php the_sub_field('background_color'); ?>">
 
 							<div class="container">
 
-								<?php the_sub_field('content', false); ?>
+								<div class="container-content">
+
+									<h2><?php echo $title ?></h2>
+
+									<?php the_sub_field('content', false); ?>
+
+								</div>
 
 							</div>
 
@@ -71,7 +76,7 @@
 						?>
 
 
-						<section id="<?php the_sub_field('section_id'); ?>" class="<?php the_sub_field('background_class'); ?>">
+						<section id="<?php the_sub_field('section_id'); ?>" class="<?php the_sub_field('background_class'); ?>" style="background: <?php the_sub_field('background_color'); ?>">
 
 							<div class="container">
 								<div class="col-md-5">
@@ -125,7 +130,7 @@
 						?>
 
 
-						<section id="<?php the_sub_field('section_id'); ?>" class="<?php the_sub_field('background_class'); ?>">
+						<section id="<?php the_sub_field('section_id'); ?>" class="<?php the_sub_field('background_class'); ?>" style="background: <?php the_sub_field('background_color'); ?>">
 
 							<div class="container">
 								<div class="row">
@@ -163,8 +168,8 @@
 
 														 <span class="container-img"><img src="<?php echo $image['url'] ?>"
 														                                  alt="<?php echo $image['alt'] ?>"
-														                                  data-quote=""
-														                                  data-source=""></span>
+														                                  data-quote="<?php echo $quote ?>"
+														                                  data-source="<?php echo $quote_source ?>"></span>
 
 
 												<?php if($i % 2 == 0): ?>
@@ -187,16 +192,14 @@
 
 						<?php
 
-					/* VIDEO SECTION WITH BACKGROUND //////////////////////////*/
+					/* PARALLAX SECTION WITH BACKGROUND //////////////////////////*/
 					elseif( get_row_layout() == 'parallax_section' ):
 
-						$bg_image = get_sub_field('bg_image');
+						$background_image = get_sub_field('background_image');
 
 						?>
 
-
-
-						<section id="<?php the_sub_field('section_id'); ?>">
+						<section id="<?php the_sub_field('section_id'); ?>" class="<?php the_sub_field('background_class'); ?>" style="background: <?php the_sub_field('background_color'); ?>">
 
 							<div class="container">
 

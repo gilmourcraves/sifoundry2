@@ -184,7 +184,9 @@ jQuery(document).ready(function($) {
         }
     }
 
-// from original prototype
+    // from original prototype
+
+    $('body.home').find('.logo').addClass('logo-white');
 
     var heroVideo = $('#hero-video');
     var heroVideoHeight = heroVideo.height();
