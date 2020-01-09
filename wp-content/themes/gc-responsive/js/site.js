@@ -193,14 +193,14 @@ jQuery(document).ready(function($) {
 
     var headerMenu = mainNav;
     var header = $('header');
+    var logo = $('.logo');
     var headerMenuTop = headerMenu.offset();
 
     if(headerMenuTop.top > (heroVideoHeight - 90)){
         headerMenu.addClass('add-background');
-        header.addClass('full-color');
     } else {
         headerMenu.removeClass('add-background');
-        header.removeClass('full-color');
+        logo.addClass('logo-white');
     }
 
     window.addEventListener("scroll", function(event) {
@@ -208,10 +208,10 @@ jQuery(document).ready(function($) {
 
         if(top > (heroVideoHeight - 90)){
             headerMenu.addClass('add-background');
-            header.addClass('full-color');
+            logo.removeClass('logo-white');
         } else {
             headerMenu.removeClass('add-background');
-            header.removeClass('full-color');
+            logo.addClass('logo-white');
         }
     }, false);
 

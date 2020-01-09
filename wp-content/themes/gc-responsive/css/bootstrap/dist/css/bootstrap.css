@@ -393,6 +393,7 @@ h6,
 .h6 {
   line-height: 1.1;
   color: inherit;
+  font-weight: 100;
 }
 h1 small,
 h2 small,
@@ -431,6 +432,7 @@ h3,
   font-family: HelveticaNeueLight, Arial, sans-serif;
   margin-top: 25px;
   margin-bottom: 12.5px;
+  font-weight: 100;
 }
 h1 small,
 .h1 small,
@@ -8981,7 +8983,7 @@ body {
 }
 .container-section-nav {
   width: 100%;
-  /*  background: @color-nav-background;*/
+  background: transparent;
   height: 80px;
   padding: 10px 0 0;
   position: fixed;
@@ -8990,12 +8992,17 @@ body {
   right: 0;
   transition: none;
   z-index: 99 !important;
-  /*  border-bottom: 1px solid #ccc;*/
 }
 .container-section-nav .container {
   max-width: 100%;
   width: 100%;
   padding: 0 20px;
+}
+.container-section-nav.add-background {
+  background: #fff;
+}
+body.home .container-section-nav.add-background #main-nav ul li > a {
+  color: #41525D;
 }
 .section-basic {
   padding: 60px 0;
@@ -9870,6 +9877,74 @@ p:empty {
   line-height: 1.45;
   text-align: center;
   max-width: 630px;
+}
+#unbiased-partners {
+  padding: 150px 0;
+}
+#unbiased-partners h2:first-child {
+  display: none;
+}
+@media (min-width: 1700px) {
+  #unbiased-partners .container-copy {
+    padding-right: 150px;
+  }
+  #unbiased-partners .container-copy h2 {
+    display: block;
+    max-width: 400px;
+  }
+}
+#container-connecting .container-copy {
+  max-width: 500px;
+}
+#container-connecting > div {
+  padding-top: 0;
+}
+/*
+#container-connecting-animation {
+  display: none;
+}
+*/
+#container-particles-mobile,
+#container-connecting-mobile-outer,
+#container-connecting-mobile {
+  display: block;
+}
+#container-particles-mobile {
+  position: relative;
+  height: 200px;
+}
+#container-connecting > div {
+  padding-top: 0 !important;
+}
+#container-connecting-mobile-outer {
+  /*  background-color: $gray-light;*/
+}
+#container-connecting-mobile {
+  display: block;
+  width: 100%;
+}
+#container-connecting-mobile ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#container-connecting-mobile ul li {
+  padding: 10px 0;
+  margin: 0;
+  font-size: 25px;
+}
+#container-connecting-mobile ul li a,
+#container-connecting-mobile ul li a:hover {
+  color: #41525D;
+}
+#container-connecting-mobile ul li div {
+  padding: 10px 0;
+  display: none;
+}
+#container-connecting-mobile ul li div p {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
 }
 /* 06 - Blog */
 body.archive h1 {

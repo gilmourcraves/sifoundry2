@@ -42,7 +42,7 @@ html, body {
 
 .container-section-nav {
   width: 100%;
-/*  background: @color-nav-background;*/
+  background: transparent;
   height: 80px;
   padding: 10px 0 0;
   position: fixed;
@@ -51,12 +51,20 @@ html, body {
   right: 0;
   transition: none;
   z-index: 99 !important;
-/*  border-bottom: 1px solid #ccc;*/
   .container {
     max-width: 100%;
     width: 100%;
     padding: 0 20px;
   }
+}
+
+.container-section-nav.add-background {
+  background: #fff;
+
+}
+
+body.home .container-section-nav.add-background #main-nav ul li > a {
+  color: @text-color;
 }
 
 .section-basic {
